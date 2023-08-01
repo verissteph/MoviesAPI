@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">MoviesApp</string>
+    <string name="posterpath">posterPath</string>
+    <string name="title">Title</string>
+    <string name="overview">Overview</string>
+    <string name="data">data</string>
+    <string name="votos">votos</string>
+</resources>
