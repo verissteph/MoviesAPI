@@ -1,4 +1,4 @@
-package com.stephanieverissimo.moviesapp
+package com.stephanieverissimo.moviesapp.ui
 
 import android.os.Bundle
 import android.widget.Toast
@@ -9,9 +9,6 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.stephanieverissimo.moviesapp.data.RetrofitBuilder
 import com.stephanieverissimo.moviesapp.data.repository.MovieRepository
 import com.stephanieverissimo.moviesapp.databinding.ActivityMainBinding
-import com.stephanieverissimo.moviesapp.ui.MovieAdapter
-import com.stephanieverissimo.moviesapp.ui.MovieViewModel
-import com.stephanieverissimo.moviesapp.ui.MovieViewModelFactory
 import kotlinx.coroutines.launch
 
 class MainActivity : AppCompatActivity() {
