@@ -47,6 +47,7 @@ dependencies {
     def paging_version = "3.1.0"
     def retrofit_version = "2.9.0"
     def coroutine_version = "1.6.4"
+    def koin_version = "3.1.2"
 
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutine_version"
     implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version"

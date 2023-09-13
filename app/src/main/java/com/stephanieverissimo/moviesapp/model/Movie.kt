@@ -11,5 +11,5 @@ data class Movie(
     @SerializedName("release_date")
     var releaseDate: String,
     @SerializedName("vote_average")
-    var voteAverange: Double,
+    var voteAverage: Double,
     )

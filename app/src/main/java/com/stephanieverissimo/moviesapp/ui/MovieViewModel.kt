@@ -2,7 +2,6 @@ package com.stephanieverissimo.moviesapp.ui
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.viewModelScope
 import androidx.paging.cachedIn
 import com.stephanieverissimo.moviesapp.BuildConfig
@@ -29,14 +28,3 @@ class MovieViewModel(repository: MovieRepository) : ViewModel() {
         }
     }
 }
-
-class MovieViewModelFactory(private val repository: MovieRepository) : ViewModelProvider.Factory {
-    override fun <T : ViewModel> create(modelClass: Class<T>): T {
-        if (modelClass.isAssignableFrom(MovieViewModel::class.java)) {
-            @Suppress("UNCHECKED_CAST")
-            return MovieViewModel(repository) as T
-        }
-        throw IllegalArgumentException("Unknown ViewModel class")
-    }
-}
-
