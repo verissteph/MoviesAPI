@@ -3,18 +3,17 @@ package com.stephanieverissimo.moviesapp.ui
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.stephanieverissimo.moviesapp.data.RetrofitBuilder
-import com.stephanieverissimo.moviesapp.data.repository.MovieRepository
 import com.stephanieverissimo.moviesapp.databinding.ActivityMainBinding
 import kotlinx.coroutines.launch
+import org.koin.androidx.viewmodel.ext.android.viewModel
+
 
 class MainActivity : AppCompatActivity() {
+    val viewModel: MovieViewModel by viewModel()
 
     private lateinit var binding: ActivityMainBinding
-    private lateinit var viewModel: MovieViewModel
     private val adapter = MovieAdapter()
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -22,11 +21,6 @@ class MainActivity : AppCompatActivity() {
 
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
-        // Criando o ViewModel
-        val repository = MovieRepository(RetrofitBuilder.movieApi)
-        val viewModelFactory = MovieViewModelFactory(repository)
-        viewModel = ViewModelProvider(this, viewModelFactory).get(MovieViewModel::class.java)
 
         // Configurando o RecyclerView
         binding.recyclerView.layoutManager = LinearLayoutManager(this)

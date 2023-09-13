@@ -26,7 +26,7 @@ class MovieAdapter : PagingDataAdapter<Movie, MovieAdapter.MovieViewHolder>(MOVI
         fun bindMovie(movie: Movie) {
             binding.tvTitle.text = movie.title
             binding.tvOverview.text = movie.overview
-            binding.tvVote.text = movie.voteAverange.toString()
+            binding.tvVote.text = movie.voteAverage.toString()
             binding.tvReleaseDate.text = movie.releaseDate
             Glide.with(binding.root)
                 .load("https://image.tmdb.org/t/p/w500${movie.posterPath}")
