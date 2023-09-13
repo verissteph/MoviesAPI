@@ -41,7 +41,6 @@ Este projeto segue a arquitetura MVVM (Model-View-ViewModel) e utiliza o padrão
 
 Algumas melhorias e recursos adicionais estão sendo considerados para futuras versões deste projeto:
 
-- **Detalhes do Filme**: Uma nova tela para mostrar detalhes mais completos sobre cada filme, incluindo atores, avaliações e trailers.
 - **Pesquisa de Filmes**: Uma funcionalidade de pesquisa para encontrar filmes específicos na lista.
 - **Favoritos**: A capacidade de marcar filmes como favoritos e uma nova tela para visualizar todos os filmes favoritos.
 - **Testes**: Testes unitários para garantir a qualidade do código e a usabilidade do aplicativo.
